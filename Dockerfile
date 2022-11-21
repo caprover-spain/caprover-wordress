@@ -2,7 +2,7 @@ FROM ubuntu:latest
 MAINTAINER John Fink <john.fink@gmail.com>
 RUN apt-get update # Fri Oct 24 13:09:23 EDT 2014
 RUN apt-get -y upgrade
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-client mysql-server apache2 libapache2-mod-php pwgen python-setuptools vim-tiny php5-mysql  php5-ldap
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-client mysql-server apache2 libapache2-mod-php pwgen python-setuptools vim-tiny php-mysql  php-ldap
 RUN easy_install supervisor
 ADD ./scripts/start.sh /start.sh
 ADD ./scripts/foreground.sh /etc/apache2/foreground.sh
